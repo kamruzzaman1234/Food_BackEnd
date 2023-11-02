@@ -41,7 +41,10 @@ mongoose.connection.on("connected", ()=>{
     console.log("Connected")
 })
 
-const PORT = process.env.PORT || 6007;  
+const PORT = process.env.PORT || 6007;
+app.get('/',(req,res)=>{
+res.send('Hello')
+})
 app.listen(PORT, ()=>{
     connect()
     console.log(`Server is Running http:${PORT}`);
